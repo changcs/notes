@@ -1,0 +1,18 @@
+* Changcs 的 Notes
+一些個人的筆記。
+
+#+BEGIN_QUOTE
+測試引用一。
+
+測試引用二， *粗體字測試，使用OK。* 以後再更新。
+
+  -- [[https://github.com/changcs][changcs]] [[file:pic/author.jpg]]
+#+END_QUOTE
+
+* 授權
+本文 Notes 採用 CC-0 授權釋出，屬公有領域。
+
+以後再補充。
+
+* 其他
+- [[https://github.com/changcs][@changcs]]
