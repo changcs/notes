@@ -52,3 +52,9 @@ Test via telnet interface and use =reg= command to display registers
 #+BEGIN_QUOTE
 $ telnet 127.0.0.1 4444
 #+END_QUOTE
+
+** 參考資料
+
+- [[http://jexbat.com/2016/BBB-Uboot/][BeagleBone Black 从零到一 2 MLO、U-Boot]]
+- [[http://www.twam.info/hardware/beaglebone-black/u-boot-on-beaglebone-black][U-Boot on BeagleBone Black]]
+- [[http://processors.wiki.ti.com/index.php/AM335x_U-Boot_User%27s_Guide#U-Boot][AM335x U-Boot User’s Guide]]
