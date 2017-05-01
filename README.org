@@ -40,7 +40,7 @@ git clone git://git.code.sf.net/p/openocd/code openocd-code.git
 4. run =openocd=
 
 #+BEGIN_QUOTE
-cd tcl
+cd tcl;
 ../src/openocd -f interface/jlink.cfg \
           -f board/ti_beaglebone_black.cfg
 #+END_QUOTE
