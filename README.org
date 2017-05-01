@@ -8,11 +8,3 @@
 
   -- [[https://github.com/changcs][changcs]] [[file:pic/author.jpg]]
 #+END_QUOTE
-
-* 授權
-本文 Notes 採用 CC-0 授權釋出，屬公有領域。
-
-以後再補充。
-
-* 其他
-- [[https://github.com/changcs][@changcs]]
