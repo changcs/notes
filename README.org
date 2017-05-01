@@ -8,3 +8,47 @@
 
   -- [[https://github.com/changcs][changcs]] [[file:pic/author.jpg]]
 #+END_QUOTE
+
+* 在 Beaglebone Black上測試openocd
+
+步驟如下
+
+** Clone openocd (正在試commit  cb317eabf2d162365467aeb89b564828e5e6d6f3)
+
+#+BEGIN_QUOTE
+git clone git://git.code.sf.net/p/openocd/code openocd-code.git
+#+END_QUOTE
+
+** Building openocd
+
+1. run =./bootstrap=
+
+2. run =./configure --help=
+
+3. run =./configure --enable-jlink=
+
+4. run =make=
+
+** Hooking up the JTAG Adapter
+
+1. connect Jlink JTAG cable to DUT
+
+2. connect Jlink to PC with USB cable. You can use =lsusb= command to check.
+
+3. power on the target board.
+
+4. run =openocd=
+
+#+BEGIN_QUOTE
+cd tcl
+../src/openocd -f interface/jlink.cfg \
+          -f board/ti_beaglebone_black.cfg
+#+END_QUOTE
+
+** Talk with the OpenOCD server using telnet or GDB
+
+Test via telnet interface and use =reg= command to display registers
+
+#+BEGIN_QUOTE
+$ telnet 127.0.0.1 4444
+#+END_QUOTE
