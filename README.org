@@ -77,6 +77,8 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 
 ** [[http://github.com/beagleboard/linux][Getting kernel source code]]
 
+若要使用 JTAG debug linux kernel，要加上[[https://github.com/maximeh/buildroot/blob/master/board/beaglebone/patches/linux/0001-keep-jtag-clock-alive-for-debugger.patch][patch]]。
+
 #+BEGIN_QUOTE
 git clone git://github.com/beagleboard/linux.git
 
@@ -88,7 +90,9 @@ make V=1 distclean
 
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 bb.org_defconfig
 
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 zImage dtbs
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 zImage dtbs modules
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/new/prefix modules_install
 #+END_QUOTE
 
 ** 參考資料
@@ -98,3 +102,4 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 zImage dtbs
 - [[http://processors.wiki.ti.com/index.php/AM335x_U-Boot_User's_Guide#U-Boot][AM335x U-Boot User's Guide]]
 - [[http://jexbat.com/2016/BBB-Prepare-booting/][BeagleBone Black 从零到一 (3 Linux 镜像、initramfs、Device Tree及根文件系统)]]
 - [[http://elinux.org/Beagleboard:BeagleBoneBlack_Rebuilding_Software_Image][Beagleboard:BeagleBoneBlack Rebuilding Software Image]]
+- [[https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black][BeagleBone Black | Arch Linux ARM]]
