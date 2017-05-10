@@ -66,10 +66,10 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 並設定成 bootable partition 。
 
 #+BEGIN_QUOTE
-# mkfs.vfat -F 32 -n boot /dev/sdX1
-# mount /dev/sdX1 /mnt
-# cp MLO u-boot.img /mnt
-# umount /mnt
+ mkfs.vfat -F 32 -n boot /dev/sdX1
+ mount /dev/sdX1 /mnt
+ cp MLO u-boot.img /mnt
+ umount /mnt
 #+END_QUOTE
 
 ** [[http://github.com/beagleboard/linux][Getting kernel source code]]
