@@ -60,7 +60,7 @@ make am335x_boneblack_defconfig
 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 #+END_QUOTE
 
-** 製作 U-Boot 的 SD 啟動卡
+** 製作 U-Boot 的 SD 啟動卡 方法一
 
 劃分一個 vfat partition 在 2048 sector 處，長度 128MB。
 並設定成 bootable partition 。
@@ -73,6 +73,20 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
  cp MLO u-boot.img /mnt
 
  umount /mnt
+#+END_QUOTE
+
+** 製作 U-Boot 的 SD 啟動卡 方法二
+
+這是 Arch Linux 建議的方法。
+
+#+BEGIN_QUOTE
+ dd if=/dev/zero of=/dev/sdX bs=1M count=8
+
+ fdisk to create an empty partition table and a ext4 FS after 2048 sectors
+
+ dd if=MLO of=/dev/sdX count=1 seek=1 conv=notrunc bs=128k
+
+ dd if=u-boot.img of=/dev/sdX count=2 seek=1 conv=notrunc bs=384k
 #+END_QUOTE
 
 ** [[http://github.com/beagleboard/linux][Getting kernel source code]]
