@@ -89,6 +89,10 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
  dd if=u-boot.img of=/dev/sdX count=2 seek=1 conv=notrunc bs=384k
 #+END_QUOTE
 
+** 安裝 Arch Linux
+
+參考 [[https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black][BeagleBone Black | Arch Linux ARM]]。
+
 ** [[http://github.com/beagleboard/linux][Getting kernel source code]]
 
 若要使用 JTAG debug linux kernel，要加上[[https://github.com/maximeh/buildroot/blob/master/board/beaglebone/patches/linux/0001-keep-jtag-clock-alive-for-debugger.patch][patch]]。
@@ -107,6 +111,20 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 bb.org_defconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 zImage dtbs modules
 
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/new/prefix modules_install
+#+END_QUOTE
+
+假設 TFTP server 的 IP 是 192.168.1.1。
+把 =arch/arm/boot/zImage= 和 =arch/arm/boot/dts/am335x-boneblack.dtb= 放到
+TFTP directory 之後，接上網路線，用以下 =u-boot= 命令開機。
+
+#+BEGIN_QUOTE
+dhcp ${loadaddr} 192.168.1.1:zImage
+
+tftpboot ${fdtaddr} 192.168.1.1:am335x-boneblack.dtb
+
+setenv bootargs "console=ttyO0,115200n8 coherent_pool=1M root=/dev/mmcblk1p1 rw rootwait fixrtc"
+
+bootz $loadaddr - $fdtaddr
 #+END_QUOTE
 
 ** 參考資料
