@@ -67,8 +67,11 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 
 #+BEGIN_QUOTE
  mkfs.vfat -F 32 -n boot /dev/sdX1
+
  mount /dev/sdX1 /mnt
+
  cp MLO u-boot.img /mnt
+
  umount /mnt
 #+END_QUOTE
 
@@ -76,10 +79,15 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 
 #+BEGIN_QUOTE
 git clone git://github.com/beagleboard/linux.git
+
 cd linux
+
 git checkout 4.4
+
 make V=1 distclean
+
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 bb.org_defconfig
+
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 zImage dtbs
 #+END_QUOTE
 
