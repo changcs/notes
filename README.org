@@ -41,11 +41,11 @@ git clone git://git.code.sf.net/p/openocd/code openocd-code.git
 
 #+BEGIN_QUOTE
 cd tcl;
-../src/openocd -f interface/jlink.cfg \
-          -f board/ti_beaglebone_black.cfg
+
+../src/openocd -f interface/jlink.cfg -f board/ti_beaglebone_black.cfg -c "init; halt"
 #+END_QUOTE
 
-** Talk with the OpenOCD server using telnet or GDB
+** Talk with the OpenOCD server using telnet
 
 Test via telnet interface and use =reg= command to display registers
 
@@ -57,6 +57,7 @@ $ telnet 127.0.0.1 4444
 
 #+BEGIN_QUOTE
 make am335x_boneblack_defconfig
+
 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 #+END_QUOTE
 
@@ -95,7 +96,9 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 
 ** [[http://github.com/beagleboard/linux][Getting kernel source code]]
 
-若要使用 JTAG debug linux kernel，要加上[[https://github.com/maximeh/buildroot/blob/master/board/beaglebone/patches/linux/0001-keep-jtag-clock-alive-for-debugger.patch][patch]]。
+- 若要使用 JTAG debug linux kernel，要加上[[https://github.com/maximeh/buildroot/blob/master/board/beaglebone/patches/linux/0001-keep-jtag-clock-alive-for-debugger.patch][patch]]。
+
+- 確定開啟 =CONFIG_DEBUG_INFO=
 
 #+BEGIN_QUOTE
 git clone git://github.com/beagleboard/linux.git
@@ -126,6 +129,21 @@ setenv bootargs "console=ttyO0,115200n8 coherent_pool=1M root=/dev/mmcblk1p1 rw 
 
 bootz $loadaddr - $fdtaddr
 #+END_QUOTE
+
+** Talk with the OpenOCD server using gdb
+
+建議使用 =emacs= 的 =gud-gdb= mode。接下來可以使用 =step= , =next= , =until= 這些命令來除錯。
+
+要看目前的 =call stack= , 可以使用 =info stack= 或是 =frame= 命令。
+
+#+BEGIN_QUOTE
+$ arm-none-eabi-gdb --fullname vmlinux
+
+(gdb) target extended-remote :3334
+
+(gdb) hbreak start_kernel
+#+END_QUOTE
+
 
 ** 參考資料
 
