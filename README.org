@@ -55,6 +55,8 @@ $ telnet 127.0.0.1 4444
 
 ** Building U-Boot
 
+若要進行 =JTAG= 除錯, 需要從 =u-boot= 關掉 =watch dog timer= 。 方法如下: 找出 =ti_am335x_common.h= 裏面 =WATCHDOG= 的 =define= ，改為 =undef= 。
+
 #+BEGIN_QUOTE
 make am335x_boneblack_defconfig
 
@@ -132,7 +134,7 @@ bootz $loadaddr - $fdtaddr
 
 ** Talk with the OpenOCD server using gdb
 
-建議使用 =emacs= 的 =gud-gdb= mode。接下來可以使用 =step= , =next= , =until= 這些命令來除錯。
+建議使用 =emacs= 的 =gud-gdb mode= 。接下來可以使用 =step= , =next= , =until= 這些命令來除錯。
 
 要看目前的 =call stack= , 可以使用 =info stack= 或是 =frame= 命令。
 
@@ -142,6 +144,16 @@ $ arm-none-eabi-gdb --fullname vmlinux
 (gdb) target extended-remote :3334
 
 (gdb) hbreak start_kernel
+
+(gdb) continue
+
+u-boot> dhcp ${loadaddr} 192.168.1.1:zImage
+
+u-boot> tftpboot ${fdtaddr} 192.168.1.1:am335x-boneblack.dtb
+
+u-boot> setenv bootargs "console=ttyO0,115200n8 coherent_pool=1M root=/dev/mmcblk1p1 rw rootwait fixrtc"
+
+u-boot> bootz $loadaddr - $fdtaddr
 #+END_QUOTE
 
 
