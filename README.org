@@ -12,6 +12,12 @@
 
 * Working with Gentoo
 
+** Synchronization
+
+#+BEGIN_QUOTE
+emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world
+#+END_QUOTE
+
 ** Add user into groups
 
 From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Adding a user to a group - Gentoo Wiki]]
