@@ -30,13 +30,13 @@ USE="git" emerge -av app-portage/layman
 layman -L
 #+END_QUOTE
 
-2. ~git clone~ my gentoo-zh overlay into ~git-home~ by
+2. [@2] ~git clone~ my gentoo-zh overlay into ~git-home~ by
 
 #+BEGIN_QUOTE
 git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
 #+END_QUOTE
 
-3. Apply ~temp gentoo-zh2~ stash
+3. [@3] Apply ~temp gentoo-zh2~ stash
 
 4. Add my ~gentoo-zh~ overlay
 
