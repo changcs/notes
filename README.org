@@ -9,6 +9,42 @@
   -- [[https://github.com/changcs][changcs]] [[file:pic/author.jpg]]
 #+END_QUOTE
 
+
+* Working with Gentoo
+
+** Add user into groups
+
+From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Adding a user to a group - Gentoo Wiki]]
+
+#+BEGIN_QUOTE
+root # gpasswd -a larry wheel
+#+END_QUOTE
+
+** Layman and overlay
+
+1. Install ~layman~ by
+
+#+BEGIN_QUOTE
+USE="git" emerge -av app-portage/layman
+
+layman -L
+#+END_QUOTE
+
+2. ~git clone~ my gentoo-zh overlay into ~git-home~ by
+
+#+BEGIN_QUOTE
+git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
+#+END_QUOTE
+
+3. Apply ~temp gentoo-zh2~ stash
+
+4. Add my ~gentoo-zh~ overlay
+
+#+BEGIN_QUOTE
+layman -o file:///home/changcs/git-home/gentoo-zh.git/repo.xml -f -a gentoo-zh2
+#+END_QUOTE
+
+
 * 在 Beaglebone Black上測試openocd
 
 步驟如下
