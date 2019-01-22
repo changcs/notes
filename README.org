@@ -50,6 +50,16 @@ git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
 layman -o file:///home/changcs/git-home/gentoo-zh.git/repo.xml -f -a gentoo-zh2
 #+END_QUOTE
 
+** Enable X Forwarding Over SSH
+
+From [[http://linuxg.net/how-to-enable-x-forwarding-over-ssh-on-gentoo-server/][How to Enable X Forwarding Over SSH on Gentoo Server]].
+Enable ~X11Forwarding~ in ~/etc/ssh/sshd_config~
+
+#+BEGIN_QUOTE
+X11Forwarding yes
+/etc/init.d/sshd reload
+#+END_QUOTE
+
 
 * 在 Beaglebone Black上測試openocd
 
