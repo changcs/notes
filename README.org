@@ -36,7 +36,7 @@ USE="git" emerge -av app-portage/layman
 layman -L
 #+END_QUOTE
 
-2. [@2] ~git clone~ my gentoo-zh overlay into ~git-home~ by
+2. [@2] ~git clone~ my gentoo-zh overlay into ~git-local~ by
 
 #+BEGIN_QUOTE
 git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
@@ -47,7 +47,7 @@ git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
 4. Add my ~gentoo-zh~ overlay
 
 #+BEGIN_QUOTE
-layman -o file:///home/changcs/git-home/gentoo-zh.git/repo.xml -f -a gentoo-zh2
+layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
 #+END_QUOTE
 
 ** Enable X Forwarding Over SSH
