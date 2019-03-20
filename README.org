@@ -10,57 +10,6 @@
 #+END_QUOTE
 
 
-* Working with Gentoo
-
-** Synchronization
-
-#+BEGIN_QUOTE
-emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world
-#+END_QUOTE
-
-** Add user into groups
-
-From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Adding a user to a group - Gentoo Wiki]]
-
-#+BEGIN_QUOTE
-root # gpasswd -a larry wheel
-#+END_QUOTE
-
-** Layman and overlay
-
-1. Install ~layman~ by
-
-#+BEGIN_QUOTE
-USE="git" emerge -av app-portage/layman
-
-layman -L
-#+END_QUOTE
-
-2. [@2] ~git clone~ my gentoo-zh overlay into ~git-local~ by
-
-#+BEGIN_QUOTE
-git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
-#+END_QUOTE
-
-3. [@3] Apply ~temp gentoo-zh2~ stash
-
-4. Add my ~gentoo-zh~ overlay
-
-#+BEGIN_QUOTE
-layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
-#+END_QUOTE
-
-** Enable X Forwarding Over SSH
-
-From [[http://linuxg.net/how-to-enable-x-forwarding-over-ssh-on-gentoo-server/][How to Enable X Forwarding Over SSH on Gentoo Server]].
-Enable ~X11Forwarding~ in ~/etc/ssh/sshd_config~
-
-#+BEGIN_QUOTE
-X11Forwarding yes
-/etc/init.d/sshd reload
-#+END_QUOTE
-
-
 * 在 Beaglebone Black上測試openocd
 
 步驟如下
@@ -217,3 +166,87 @@ u-boot> bootz $loadaddr - $fdtaddr
 - [[http://jexbat.com/2016/BBB-Prepare-booting/][BeagleBone Black 从零到一 (3 Linux 镜像、initramfs、Device Tree及根文件系统)]]
 - [[http://elinux.org/Beagleboard:BeagleBoneBlack_Rebuilding_Software_Image][Beagleboard:BeagleBoneBlack Rebuilding Software Image]]
 - [[https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black][BeagleBone Black | Arch Linux ARM]]
+
+
+* Working with Gentoo
+
+** Synchronization
+
+#+BEGIN_QUOTE
+emerge --sync # or
+
+emerge-webrsync
+
+emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world
+#+END_QUOTE
+
+** Add user into groups
+
+From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Adding a user to a group - Gentoo Wiki]]
+
+#+BEGIN_QUOTE
+root # gpasswd -a larry wheel
+#+END_QUOTE
+
+** Layman and overlay
+
+1. Install ~layman~ by
+
+#+BEGIN_QUOTE
+USE="git" emerge -av app-portage/layman
+
+layman -L
+#+END_QUOTE
+
+2. [@2] ~git clone~ my gentoo-zh overlay into ~git-local~ by
+
+#+BEGIN_QUOTE
+git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
+#+END_QUOTE
+
+3. [@3] Apply ~temp gentoo-zh2~ stash
+
+4. Add my ~gentoo-zh~ overlay
+
+#+BEGIN_QUOTE
+layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
+#+END_QUOTE
+
+** Enable X Forwarding Over SSH
+
+From [[http://linuxg.net/how-to-enable-x-forwarding-over-ssh-on-gentoo-server/][How to Enable X Forwarding Over SSH on Gentoo Server]].
+Enable ~X11Forwarding~ in ~/etc/ssh/sshd_config~
+
+#+BEGIN_QUOTE
+X11Forwarding yes
+/etc/init.d/sshd reload
+#+END_QUOTE
+
+** How to make prompt with git branch in bash gentoo
+
+1. Reference [[https://gist.github.com/d4rk5eed/d1651aa46e42d91ef96f][How to make prompt with git branch in bash gentoo]]
+
+2. 
+#+BEGIN_QUOTE
+emerge -av app-shells/bash-completion
+
+find /usr -name git-prompt.sh.bz2
+
+cp /usr/share/doc/git-1.8.5.5/git-prompt.sh.bz2 ~
+
+bunzip2 git-prompt.sh.bz2
+
+mv git-prompt.sh .git-prompt.sh
+
+Paste into ~/.bashrc
+
+# Bash completion
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+source ~/.git-prompt.sh
+#+END_QUOTE
