@@ -248,6 +248,15 @@ git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
 layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
 #+END_QUOTE
 
+** Remap Alt and Ctrl in virtual console
+
+1. Set ~windowkeys=NO~ in ~/etc/conf.d/keymaps~.
+
+2. Create ~personal.map.gz~ by revising ~/usr/share/keymaps/i386/qwerty/us.map.gz~.
+
+1. Set ~keymap=personal~ in ~/etc/conf.d/keymaps~.
+
+
 ** Enable X Forwarding Over SSH
 
 From [[http://linuxg.net/how-to-enable-x-forwarding-over-ssh-on-gentoo-server/][How to Enable X Forwarding Over SSH on Gentoo Server]].
