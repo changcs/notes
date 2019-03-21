@@ -58,11 +58,11 @@ $ telnet 127.0.0.1 4444
 
 若要進行 =JTAG= 除錯, 需要從 =u-boot= 關掉 =watchdog timer= 。 方法如下: 找出 =ti_am335x_common.h= 裏面 =WATCHDOG= 的 =define= ，改為 =undef= 。
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 make am335x_boneblack_defconfig
 
 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
-#+END_QUOTE
+#+END_EXAMPLE
 
 ** 製作 U-Boot 的 SD 啟動卡 方法一
 
@@ -103,7 +103,7 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make
 
 - 確定開啟 =CONFIG_DEBUG_INFO=
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 git clone git://github.com/beagleboard/linux.git
 
 cd linux
@@ -117,13 +117,13 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 bb.org_defconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- V=1 zImage dtbs modules
 
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/new/prefix modules_install
-#+END_QUOTE
+#+END_EXAMPLE
 
 假設 TFTP server 的 IP 是 192.168.1.1。
 把 =arch/arm/boot/zImage= 和 =arch/arm/boot/dts/am335x-boneblack.dtb= 放到
 TFTP directory 之後，接上網路線，用以下 =u-boot= 命令開機。
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 dhcp ${loadaddr} 192.168.1.1:zImage
 
 tftpboot ${fdtaddr} 192.168.1.1:am335x-boneblack.dtb
@@ -131,7 +131,7 @@ tftpboot ${fdtaddr} 192.168.1.1:am335x-boneblack.dtb
 setenv bootargs "console=ttyO0,115200n8 coherent_pool=1M root=/dev/mmcblk1p1 rw rootwait fixrtc"
 
 bootz $loadaddr - $fdtaddr
-#+END_QUOTE
+#+END_EXAMPLE
 
 ** Talk with the OpenOCD server using gdb
 
@@ -139,7 +139,7 @@ bootz $loadaddr - $fdtaddr
 
 要看目前的 =call stack= , 可以使用 =info stack= 或是 =frame= 命令。
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 $ arm-none-eabi-gdb --fullname vmlinux
 
 (gdb) target extended-remote :3334
@@ -155,7 +155,7 @@ u-boot> tftpboot ${fdtaddr} 192.168.1.1:am335x-boneblack.dtb
 u-boot> setenv bootargs "console=ttyO0,115200n8 coherent_pool=1M root=/dev/mmcblk1p1 rw rootwait fixrtc"
 
 u-boot> bootz $loadaddr - $fdtaddr
-#+END_QUOTE
+#+END_EXAMPLE
 
 
 ** 參考資料
@@ -166,6 +166,42 @@ u-boot> bootz $loadaddr - $fdtaddr
 - [[http://jexbat.com/2016/BBB-Prepare-booting/][BeagleBone Black 从零到一 (3 Linux 镜像、initramfs、Device Tree及根文件系统)]]
 - [[http://elinux.org/Beagleboard:BeagleBoneBlack_Rebuilding_Software_Image][Beagleboard:BeagleBoneBlack Rebuilding Software Image]]
 - [[https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black][BeagleBone Black | Arch Linux ARM]]
+
+
+* Openwrt and Beaglebone Black
+
+[[https://github.com/nc543][nc543]] mentioned [[https://github.com/nc543/openwrt-bbb/wiki/Official-OpenWrt-Support-BeagleBone-Black][Official OpenWrt Support BeagleBone Black]].
+When the menu appear, select Target System as ~TI OMAP3/4/AM33xx~,
+Target Profile as ~TI AM335x BeagleBone Black~.
+
+** Image Configuration
+
+More details can be found [[https://openwrt.org/docs/guide-developer/build-system/use-buildsystem][here]]. Actions:
+
+1. run ~./scripts/feeds update -a~
+2. run ~./scripts/feeds install -a -f~
+3. run ~make menuconfig~ and set target
+4. run ~make defconfig~ to set default config for build system and device
+5. run ~make kernel_menuconfig~ (optional)
+6. run ~make menuconfig~ and modify set of package
+7. run ~make download~
+8. run ~./scripts/diffconfig.sh~
+
+** Building Images
+
+#+BEGIN_QUOTE
+ionice -c 3 nice -n19 make V=cs
+#+END_QUOTE
+
+** Writing the image to micro SD card
+
+#+BEGIN_EXAMPLE
+zcat bin/targets/omap/generic/openwrt-omap-ti_am335x-bone-black-ext4-sdcard.img.gz | sudo dd of=/dev/sdX bs=4096 conv=fsync
+#+END_EXAMPLE
+
+** Boot Up Beaglebone Black
+
+Plug the SD card into BeagleBone Black, then power on BeagleBone Black with the BOOT button (S2) pressed to boot from SD.
 
 
 * Working with Gentoo
@@ -227,7 +263,8 @@ X11Forwarding yes
 1. Reference [[https://gist.github.com/d4rk5eed/d1651aa46e42d91ef96f][How to make prompt with git branch in bash gentoo]]
 
 2. 
-#+BEGIN_QUOTE
+
+#+BEGIN_EXAMPLE
 emerge -av app-shells/bash-completion
 
 find /usr -name git-prompt.sh.bz2
@@ -249,4 +286,4 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 source ~/.git-prompt.sh
-#+END_QUOTE
+#+END_EXAMPLE
