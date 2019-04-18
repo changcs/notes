@@ -257,6 +257,11 @@ layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
 1. Set ~keymap=personal~ in ~/etc/conf.d/keymaps~.
 
 
+** Enable ssh root login
+
+1. Set ~PermitRootLogin~ to ~yes~ in ~/etc/ssh/sshd_config~.
+
+
 ** Enable X Forwarding Over SSH
 
 From [[http://linuxg.net/how-to-enable-x-forwarding-over-ssh-on-gentoo-server/][How to Enable X Forwarding Over SSH on Gentoo Server]].
