@@ -254,7 +254,7 @@ layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
 
 2. Create ~personal.map.gz~ by revising ~/usr/share/keymaps/i386/qwerty/us.map.gz~.
 
-1. Set ~keymap=personal~ in ~/etc/conf.d/keymaps~.
+3. Set ~keymap=personal~ in ~/etc/conf.d/keymaps~.
 
 
 ** Enable ssh root login
