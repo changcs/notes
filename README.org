@@ -216,6 +216,7 @@ emerge-webrsync
 emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world
 #+END_QUOTE
 
+
 ** Add user into groups
 
 From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Adding a user to a group - Gentoo Wiki]]
@@ -223,6 +224,7 @@ From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Add
 #+BEGIN_QUOTE
 root # gpasswd -a larry wheel
 #+END_QUOTE
+
 
 ** Layman and overlay
 
@@ -248,6 +250,7 @@ git clone https://github.com/changcs/gentoo-zh.git gentoo-zh.git
 layman -o file:///home/changcs/git-local/gentoo-zh.git/repo.xml -f -a gentoo-zh2
 #+END_QUOTE
 
+
 ** Remap Alt and Ctrl in virtual console
 
 1. Set ~windowkeys=NO~ in ~/etc/conf.d/keymaps~.
@@ -271,6 +274,7 @@ Enable ~X11Forwarding~ in ~/etc/ssh/sshd_config~
 X11Forwarding yes
 /etc/init.d/sshd reload
 #+END_QUOTE
+
 
 ** How to make prompt with git branch in bash gentoo
 
