@@ -313,3 +313,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 source ~/.git-prompt.sh
 #+END_EXAMPLE
+
+
+** Portage Local Mirror
+
+Browse [[https://wiki.gentoo.org/wiki/Local_Mirror][Portage Local Mirror]]
