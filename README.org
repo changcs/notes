@@ -226,6 +226,14 @@ root # gpasswd -a larry wheel
 #+END_QUOTE
 
 
+** Automatic kernel module loading
+
+#+BEGIN_QUOTE
+root # mkdir -p /etc/modules-load.d
+root # nano -w /etc/modules-load.d/network.conf
+#+END_QUOTE
+
+
 ** Layman and overlay
 
 1. Install ~layman~ by
