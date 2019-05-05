@@ -318,3 +318,8 @@ source ~/.git-prompt.sh
 ** Portage Local Mirror
 
 Browse [[https://wiki.gentoo.org/wiki/Local_Mirror][Portage Local Mirror]]
+
+* Emacs and Org mode Tips
+
+** [[https://irreal.org/blog/?p=8008][Drawing Figures in Math Lectures]] and [[https://inkscape.org/][Inkscape]]
+** [[https://irreal.org/blog/?p=8016][Introduction to Spacemacs]]
