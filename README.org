@@ -321,6 +321,12 @@ source ~/.git-prompt.sh
 
 Browse [[https://wiki.gentoo.org/wiki/Local_Mirror][Portage Local Mirror]]
 
+
+** Basic guide to write Gentoo Ebuilds
+
+Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
+
+
 * Emacs and Org mode Tips
 
 ** [[https://irreal.org/blog/?p=8008][Drawing Figures in Math Lectures]] and [[https://inkscape.org/][Inkscape]]
