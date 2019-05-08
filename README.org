@@ -206,6 +206,8 @@ Plug the SD card into BeagleBone Black, then power on BeagleBone Black with the 
 
 * Working with Gentoo
 
+[[https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation][AMD64 Installation Guide]]
+
 ** Synchronization
 
 #+BEGIN_QUOTE
