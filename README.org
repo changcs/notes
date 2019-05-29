@@ -336,3 +336,15 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 
 ** [[https://irreal.org/blog/?p=8008][Drawing Figures in Math Lectures]] and [[https://inkscape.org/][Inkscape]]
 ** [[https://irreal.org/blog/?p=8016][Introduction to Spacemacs]]
+
+
+* HDL
+
+** [[https://coldnew.github.io/7004ff00/#org710b9aa][coldnew blog: zybo board 開發記錄: 硬體認識]]
+
+
+** PyHDL
+
+Browse [[https://www.youtube.com/watch?v=LSgOpvr8FII][PyConTW 2013: MyHDL designing digital hardware with Python by Jan Decaluwe]]
+
+
