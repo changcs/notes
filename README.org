@@ -317,6 +317,11 @@ source ~/.git-prompt.sh
 #+END_EXAMPLE
 
 
+** Disk Quotas
+
+Browse [[https://wiki.gentoo.org/wiki/User:Gavlee/Draft:Disk_Quotas][Disk Quotas]]
+
+
 ** Portage Local Mirror
 
 Browse [[https://wiki.gentoo.org/wiki/Local_Mirror][Portage Local Mirror]]
