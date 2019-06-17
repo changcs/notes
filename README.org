@@ -340,6 +340,9 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 
 * HDL
 
+** [[https://www.nand2tetris.org/][nand2tetris]]
+
+
 ** [[https://coldnew.github.io/7004ff00/#org710b9aa][coldnew blog: zybo board 開發記錄: 硬體認識]]
 
 
