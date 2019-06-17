@@ -327,6 +327,13 @@ Browse [[https://wiki.gentoo.org/wiki/User:Gavlee/Draft:Disk_Quotas][Disk Quotas
 Browse [[https://wiki.gentoo.org/wiki/Local_Mirror][Portage Local Mirror]]
 
 
+** Screenshot Using Command Line
+
+#+BEGIN_EXAMPLE
+sleep 5; xwd -root | xwdtopnm | pnmtopng > capture.png
+#+END_EXAMPLE
+
+
 ** Basic guide to write Gentoo Ebuilds
 
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
