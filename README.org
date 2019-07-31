@@ -359,6 +359,8 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 
 * Emacs and Org mode Tips
 
+** [[https://www.reddit.com/r/emacs/comments/cdei4p/failed_to_download_gnu_archive_bad_request/][Failed to download gnu archive]]
+** [[https://docplayer.net/95762692-Exwm-emacs-x-windows-manager.html][EXWM: Emacs X Windows Manager pdf]]
 ** [[https://irreal.org/blog/?p=8008][Drawing Figures in Math Lectures]] and [[https://inkscape.org/][Inkscape]]
 ** [[https://linuxhint.com/documents_emacs_org_mode/][Make beautiful documents from Emacs ORG-Mode]]
 ** [[https://yiufung.net/post/org-mode-hidden-gems-pt4/][Org-mode Hidden Gems - 04 TODO Items]]
