@@ -317,6 +317,11 @@ source ~/.git-prompt.sh
 #+END_EXAMPLE
 
 
+** lftp not support sftp can be fixed by emerging gnutls lib
+
+URL will be provided later.
+
+
 ** Disk Quotas
 
 Browse [[https://wiki.gentoo.org/wiki/User:Gavlee/Draft:Disk_Quotas][Disk Quotas]]
