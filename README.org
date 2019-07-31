@@ -334,6 +334,19 @@ sleep 5; xwd -root | xwdtopnm | pnmtopng > capture.png
 #+END_EXAMPLE
 
 
+** VirtualBox
+
+Browse [[https://wiki.gentoo.org/wiki/VirtualBox][Gentoo VirtualBox]]
+
+#+BEGIN_EXAMPLE
+echo "app-emulation/virtualbox-bin PUEL" >> /etc/portage/package.license/virtualbox-bin
+
+emerge -av app-emulation/virtualbox-bin
+
+gpasswd -a <user> vboxusers
+#+END_EXAMPLE
+
+
 ** Basic guide to write Gentoo Ebuilds
 
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
