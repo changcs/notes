@@ -327,6 +327,35 @@ URL will be provided later.
 Browse [[https://wiki.gentoo.org/wiki/User:Gavlee/Draft:Disk_Quotas][Disk Quotas]]
 
 
+** LVM setup
+
+#+BEGIN_EXAMPLE
+emerge -av sys-fs/lvm2
+
+cat sys-fs/lvm2 lvm2create_initrd readline > /etc/portage/package.use/lvm2
+
+pvdisplay
+
+# cfdisk to create a dos extended partition at/dev/sdd6
+
+pvcreate /dev/sdd6
+
+vgcreate home_vg /dev/sdd6
+
+vgdisplay
+
+lvcreate -l 100%FREE -n home home_vg
+
+ls -l /dev/home_vg
+home -> ../dm-2
+
+mkfs.ext4 /dev/home_vg/home
+
+mount -t ext4 /dev/home_vg/home /home3
+
+#+END_EXAMPLE
+
+
 ** Portage Local Mirror
 
 Browse [[https://wiki.gentoo.org/wiki/Local_Mirror][Portage Local Mirror]]
