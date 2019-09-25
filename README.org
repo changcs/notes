@@ -381,6 +381,11 @@ gpasswd -a <user> vboxusers
 #+END_EXAMPLE
 
 
+** Unmasking a package
+
+Browse [[https://wiki.gentoo.org/wiki/Knowledge_Base:Unmasking_a_package][Gentoo Knowledge Base:Unmasking a package]]
+
+
 ** Basic guide to write Gentoo Ebuilds
 
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
