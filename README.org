@@ -386,6 +386,28 @@ gpasswd -a <user> vboxusers
 Browse [[https://wiki.gentoo.org/wiki/Knowledge_Base:Unmasking_a_package][Gentoo Knowledge Base:Unmasking a package]]
 
 
+** Hacking a software
+
+Browse [[https://forums.gentoo.org/viewtopic-t-1058144-start-0.html][Emerge Strategy when hacking a software]]
+
+#+BEGIN_EXAMPLE
+When I want to hack a package for which an ebuild exists (say foo-x.y.z.ebuild), this is what I do.
+
+Code:
+ebuild /usr/portage/path-to-the-ebuild/foo-x.y.z.ebuild prepare
+
+Go to the extracted source directory:
+Code:
+cd /tmp/portage/path-to-the-ebuild/foo-x.y.x/work
+and there I edit, hack, etc. the sources.
+Then I use the command merge to compile the hacked sources and install:
+Code:
+ebuild  /usr/portage/path-to-the-ebuild/foo-x.y.z.ebuild merge
+Everything is installed in the proper places.
+I can uninstall with the command ebuild ... unmerge.
+#+END_EXAMPLE
+
+
 ** Basic guide to write Gentoo Ebuilds
 
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
