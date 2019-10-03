@@ -184,8 +184,9 @@ More details can be found [[https://openwrt.org/docs/guide-developer/build-syste
 4. run ~make defconfig~ to set default config for build system and device
 5. run ~make kernel_menuconfig~ (optional)
 6. run ~make menuconfig~ and modify set of package
-7. run ~make download~
-8. run ~./scripts/diffconfig.sh~
+7. run ~./scripts/diffconfig.sh > diffconfig~
+8. run ~make download~
+9. run ~./scripts/diffconfig.sh~
 
 
 ** Building Images
