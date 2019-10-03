@@ -187,17 +187,20 @@ More details can be found [[https://openwrt.org/docs/guide-developer/build-syste
 7. run ~make download~
 8. run ~./scripts/diffconfig.sh~
 
+
 ** Building Images
 
 #+BEGIN_QUOTE
 ionice -c 3 nice -n19 make V=cs
 #+END_QUOTE
 
+
 ** Writing the image to micro SD card
 
 #+BEGIN_EXAMPLE
 zcat bin/targets/omap/generic/openwrt-omap-ti_am335x-bone-black-ext4-sdcard.img.gz | sudo dd of=/dev/sdX bs=4096 conv=fsync
 #+END_EXAMPLE
+
 
 ** Boot Up Beaglebone Black
 
