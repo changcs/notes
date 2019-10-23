@@ -255,7 +255,7 @@ uenvbootargs=setenv bootargs console=${console} root=/dev/mmcblk0p2 rootwait
 
 * Working with Gentoo
 
-[[https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation][AMD64 Installation Guide]]
+[[https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation][AMD64 Installation Guide]] and [[https://wiki.gentoo.org/wiki/Handbook:X86/Full/Installation][X86 Installation Guide]]
 
 ** Synchronization
 
