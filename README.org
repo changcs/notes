@@ -482,6 +482,9 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 ** [[https://coldnew.github.io/7004ff00/#org710b9aa][coldnew blog: zybo board 開發記錄: 硬體認識]]
 
 
+** [[https://www.walknsqualk.com/post/014-tiny-fpga-bx/][FPGA design for Software Engineers]]
+
+
 ** [[https://github.com/davidthings/tinyfpga_bx_usbserial][USB Serial on the TinyFPGA BX]]
 
 
