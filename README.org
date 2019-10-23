@@ -482,6 +482,9 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 ** [[https://coldnew.github.io/7004ff00/#org710b9aa][coldnew blog: zybo board 開發記錄: 硬體認識]]
 
 
+** [[https://github.com/davidthings/tinyfpga_bx_usbserial][USB Serial on the TinyFPGA BX]]
+
+
 ** PyHDL
 
 Browse [[https://www.youtube.com/watch?v=LSgOpvr8FII][PyConTW 2013: MyHDL designing digital hardware with Python by Jan Decaluwe]]
