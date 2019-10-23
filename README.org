@@ -485,6 +485,9 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 ** [[https://www.walknsqualk.com/post/014-tiny-fpga-bx/][FPGA design for Software Engineers]]
 
 
+** [[https://github.com/sysprog21/rv32emu][RISC-V RV32I emulator with ELF support]]
+
+
 ** [[https://github.com/davidthings/tinyfpga_bx_usbserial][USB Serial on the TinyFPGA BX]]
 
 
