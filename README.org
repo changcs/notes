@@ -136,6 +136,7 @@ bootz $loadaddr - $fdtaddr
 ** Talk with the OpenOCD server using gdb
 
 建議使用 =emacs= 的 =gud-gdb mode= 。接下來可以使用 =step= , =next= , =until= 這些命令來除錯。
+=openwrt= 的 =gdb= 在 =staging_dir/toolchain-arm_*_${libc}*/bin/*-gdb= 。
 
 要看目前的 =call stack= , 可以使用 =info stack= 或是 =frame= 命令。
 
