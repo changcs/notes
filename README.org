@@ -253,6 +253,21 @@ uenvbootargs=setenv bootargs console=${console} root=/dev/mmcblk0p2 rootwait
 #+END_EXAMPLE
 
 
+** Manually Boot Up Beaglebone Black
+
+Plug the SD card into BeagleBone Black, then power on BeagleBone Black with the BOOT button (S2) pressed to boot from SD.
+
+#+BEGIN_EXAMPLE
+load mmc 0:1 0x88000000 /dtbs/am335x-boneblack.dtb
+
+load mmc 0:1 0x82000000 /zImage
+
+setenv bootargs "console=ttyO0,115200n8 root=/dev/mmcblk0p2 rootwait"
+
+bootz 0x82000000 - 0x88000000
+#+END_EXAMPLE
+
+
 * Working with Gentoo
 
 [[https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation][AMD64 Installation Guide]] and [[https://wiki.gentoo.org/wiki/Handbook:X86/Full/Installation][X86 Installation Guide]]
