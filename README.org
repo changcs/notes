@@ -478,6 +478,11 @@ I can uninstall with the command ebuild ... unmerge.
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
 
 
+** epatch introduction
+
+Browse [[https://coldnew.github.io/fa15781c/][Gentoo epatch Introduction by coldnew]]
+
+
 * Emacs and Org mode Tips
 
 ** [[https://irreal.org/blog/?p=8377][Irreal: Generating Slides and a PDF From the Same Org File]]
