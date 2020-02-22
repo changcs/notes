@@ -485,6 +485,15 @@ Browse [[https://coldnew.github.io/fa15781c/][Gentoo epatch Introduction by cold
 
 * Emacs and Org mode Tips
 
+** Dired attach multiple files
+
+#+BEGIN_QUOTE
+turn-on-gnus-dired-mode
+
+C-c C-m C-a to run gnus-dired-attach
+#+END_QUOTE
+
+
 ** [[https://irreal.org/blog/?p=8377][Irreal: Generating Slides and a PDF From the Same Org File]]
 ** [[https://github.com/TommyX12/company-tabnine][A company-mode backend for TabNine]]
 ** [[https://www.reddit.com/r/emacs/comments/cdei4p/failed_to_download_gnu_archive_bad_request/][Failed to download gnu archive]]
