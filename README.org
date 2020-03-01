@@ -446,6 +446,11 @@ gpasswd -a <user> vboxusers
 #+END_EXAMPLE
 
 
+** 修正 emacs 在X11下不能使用中文輸入法的問題
+
+Browse [[https://coldnew.github.io/576cfa12/][修正 emacs 在X11下不能使用中文輸入法的問題]]
+
+
 ** Unmasking a package
 
 Browse [[https://wiki.gentoo.org/wiki/Knowledge_Base:Unmasking_a_package][Gentoo Knowledge Base:Unmasking a package]]
