@@ -478,6 +478,11 @@ I can uninstall with the command ebuild ... unmerge.
 #+END_EXAMPLE
 
 
+** Ebuild Predefined Read-Only Variables
+
+Browse [[https://devmanual.gentoo.org/ebuild-writing/variables/][Variables - Gentoo Development Guide]]
+
+
 ** Basic guide to write Gentoo Ebuilds
 
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
