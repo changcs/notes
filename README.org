@@ -483,6 +483,24 @@ I can uninstall with the command ebuild ... unmerge.
 Browse [[https://devmanual.gentoo.org/ebuild-writing/variables/][Variables - Gentoo Development Guide]]
 
 
+** Prepare SSH key
+
+#+BEGIN_EXAMPLE
+ssh-keygen -t rsa -C your_email@example.com
+#+END_EXAMPLE
+
+
+** Test SSH key after importing to github
+
+1. The import web page can be found at ~Settings - SSH and PGP keys~.
+
+2. Then test with
+
+#+BEGIN_EXAMPLE
+ssh -T git@github.com
+#+END_EXAMPLE
+
+
 ** Basic guide to write Gentoo Ebuilds
 
 Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
