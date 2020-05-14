@@ -536,6 +536,7 @@ C-c C-m C-a to run gnus-dired-attach
 ** [[https://yiufung.net/post/org-mode-hidden-gems-pt4/][Org-mode Hidden Gems - 04 TODO Items]]
 ** [[https://irreal.org/blog/?p=8016][Introduction to Spacemacs]]
 ** [[https://yoo2080.wordpress.com/2014/07/04/it-is-not-hard-to-read-lisp-code/][It is not hard to read Lisp code]]
+** [[https://opensource.com/article/20/5/r-emacs-data-science][Analyzing data science code with R and Emacs]]
 ** [[https://www.youtube.com/watch?v=jwz7aYUWIbM][Emacs: introduction to GNUS]]
 
 
