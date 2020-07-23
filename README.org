@@ -306,6 +306,11 @@ root # nano -w /etc/modules-load.d/network.conf
 #+END_QUOTE
 
 
+** package.provided trick
+
+Browse [[https://wiki.gentoo.org/wiki//etc/portage/profile/package.provided][Gentoo WiKi]]
+
+
 ** Layman and overlay
 
 1. Install ~layman~ by
