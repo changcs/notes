@@ -513,7 +513,7 @@ ssh -T git@github.com
 
 ** Basic guide to write Gentoo Ebuilds
 
-Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]]
+Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic guide to write Gentoo Ebuilds]] and [[https://devmanual.gentoo.org/ebuild-writing/variables/index.html][ebuild variables]]
 
 
 ** epatch introduction
