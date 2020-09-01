@@ -493,6 +493,11 @@ I can uninstall with the command ebuild ... unmerge.
 Browse [[https://devmanual.gentoo.org/ebuild-writing/variables/][Variables - Gentoo Development Guide]]
 
 
+** Gentoo Binhost
+
+Browse [[https://github.com/coldnew/gentoo-binhost][Github gentoo-binhost]] of coldnew
+
+
 ** Prepare SSH key
 
 #+BEGIN_EXAMPLE
