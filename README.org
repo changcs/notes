@@ -573,6 +573,13 @@ C-c C-m C-a to run gnus-dired-attach
 ** [[https://github.com/davidthings/tinyfpga_bx_usbserial][USB Serial on the TinyFPGA BX]]
 
 
+** J-core
+
+Browse
+- [[https://www.youtube.com/watch?v=dVD1Yws__v0][Why the J-core open processor is cool]]
+- [[https://j-core.org/][J-Core Open Processor]]
+
+
 ** PyHDL
 
 Browse [[https://www.youtube.com/watch?v=LSgOpvr8FII][PyConTW 2013: MyHDL designing digital hardware with Python by Jan Decaluwe]]
