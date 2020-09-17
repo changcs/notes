@@ -289,6 +289,15 @@ emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world
 #+END_QUOTE
 
 
+** Create a user account
+
+In the next example, a user call /john/ is created:
+
+#+BEGIN_QUOTE
+root # useradd -m -G users john
+#+END_QUOTE
+
+
 ** Add user into groups
 
 From [[https://wiki.gentoo.org/wiki/Knowledge_Base:Adding_a_user_to_a_group][Adding a user to a group - Gentoo Wiki]]
