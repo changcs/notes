@@ -582,6 +582,12 @@ C-c C-m C-a to run gnus-dired-attach
 ** [[https://github.com/davidthings/tinyfpga_bx_usbserial][USB Serial on the TinyFPGA BX]]
 
 
+** Raspberry Pi
+
+Please browse
+- [[https://devandgear.com/13-useful-project-ideas-for-your-raspberry-pi-with-tutorials/][13 Useful Project Ideas for Your Raspberry Pi With Tutorials]]
+
+
 ** J-core
 
 Browse
