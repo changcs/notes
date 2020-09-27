@@ -525,6 +525,30 @@ ssh -T git@github.com
 #+END_EXAMPLE
 
 
+** LaTeX and CJK
+
+*** Install necessary packages
+
+#+BEGIN_EXAMPLE
+emerge -av app-text/texlive dev-texlive/texlive-langcjk
+#+END_EXAMPLE
+
+
+*** Install necessary fonts
+
+Copy necessary fonts to ~/usr/share/texmf-dist/fonts~ directory
+from Debian ~latex-cjkchinesearphic-bsmi00lp~ packages:
+
+#+BEGIN_EXAMPLE
+/usr/share/texmf/fonts/afm/arphic
+/usr/share/texmf/fonts/tfm/arphic
+/usr/share/texmf/fonts/vf/arphic
+/usr/share/texmf/fonts/type1/arphic
+#+END_EXAMPLE
+
+Finally you have to run ~mktexlsr~ command to refresh the kpathsea caches.
+
+
 ** Circular dependencies between ~certifi~ and ~setuptools~
 
 Browse [[https://www.reddit.com/r/Gentoo/comments/i0fl7w/help_how_to_overcome_the_circular_dependencies/][How to overcome the circular dependencies between certifi and setuptools]]
