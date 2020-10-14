@@ -311,6 +311,7 @@ root # gpasswd -a larry wheel
 
 #+BEGIN_QUOTE
 root # mkdir -p /etc/modules-load.d
+
 root # nano -w /etc/modules-load.d/network.conf
 #+END_QUOTE
 
