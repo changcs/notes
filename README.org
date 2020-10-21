@@ -566,6 +566,11 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 Browse [[https://coldnew.github.io/fa15781c/][Gentoo epatch Introduction by coldnew]]
 
 
+** Home router
+
+Browse [[https://wiki.gentoo.org/wiki/Home_router][Gentoo Home router]]
+
+
 * Emacs and Org mode Tips
 
 ** Dired attach multiple files
