@@ -596,6 +596,24 @@ C-c C-m C-a to run gnus-dired-attach
 ** [[https://www.youtube.com/watch?v=jwz7aYUWIbM][Emacs: introduction to GNUS]]
 
 
+* Python Tips
+
+** Python Zip Executables
+
+#+BEGIN_QUOTE
+zip -r9 library.zip unpacked
+
+echo '#!/usr/bin/env python' > my_executable_zip
+
+cat output_of_setup_py_bdist.zip >> my_executable_zip
+
+chmod +x my_executable_zip
+#+END_QUOTE
+
+Browse
+- [[https://stackoverflow.com/questions/17486578/how-can-you-bundle-all-your-python-code-into-a-single-zip-file][How can you bundle all your python code into a single zip file? - Stack Overflow]]
+
+
 * HDL
 
 ** [[https://www.nand2tetris.org/][nand2tetris]]
