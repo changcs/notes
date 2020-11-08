@@ -614,6 +614,11 @@ Browse
 - [[https://stackoverflow.com/questions/17486578/how-can-you-bundle-all-your-python-code-into-a-single-zip-file][How can you bundle all your python code into a single zip file? - Stack Overflow]]
 
 
+* Embedded Linux Security
+
+** [[https://embeddedbits.org/introduction-embedded-linux-security-part-1/][Introduction to Embedded Linux Security - part 1]]
+
+
 * HDL
 
 ** [[https://www.nand2tetris.org/][nand2tetris]]
