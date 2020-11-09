@@ -582,6 +582,7 @@ C-c C-m C-a to run gnus-dired-attach
 #+END_QUOTE
 
 
+** [[https://www.youtube.com/watch?v=PMWwM8QJAtU][Emacs From Scratch No. 10 - Effortless File Management with Dired]]
 ** [[https://irreal.org/blog/?p=8377][Irreal: Generating Slides and a PDF From the Same Org File]]
 ** [[https://github.com/TommyX12/company-tabnine][A company-mode backend for TabNine]]
 ** [[https://www.reddit.com/r/emacs/comments/cdei4p/failed_to_download_gnu_archive_bad_request/][Failed to download gnu archive]]
