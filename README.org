@@ -599,6 +599,8 @@ C-c C-m C-a to run gnus-dired-attach
 
 * Python Tips
 
+** [[https://www.youtube.com/watch?v=aRmUiTPVnNg][Emacs Live Coding in Python v4.2]]
+
 ** Python Zip Executables
 
 #+BEGIN_QUOTE
