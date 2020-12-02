@@ -618,6 +618,11 @@ Browse
 - [[https://stackoverflow.com/questions/17486578/how-can-you-bundle-all-your-python-code-into-a-single-zip-file][How can you bundle all your python code into a single zip file? - Stack Overflow]]
 
 
+* Python
+
+** [[https://www.youtube.com/watch?v=LosIGgon_KM][Python Tutorial Urllib - GET Requests]]
+
+
 * DrGeo
 
 ** [[https://newtoypia.blogspot.com/2019/08/dr-geo.html][尺規作圖遊樂場 Dr. Geo]]
