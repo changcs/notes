@@ -609,6 +609,7 @@ C-c C-m C-a to run gnus-dired-attach
 
 ** [[https://www.youtube.com/watch?v=aRmUiTPVnNg][Emacs Live Coding in Python v4.2]]
 
+
 ** Python Zip Executables
 
 #+BEGIN_QUOTE
@@ -625,7 +626,6 @@ Browse
 - [[https://stackoverflow.com/questions/17486578/how-can-you-bundle-all-your-python-code-into-a-single-zip-file][How can you bundle all your python code into a single zip file? - Stack Overflow]]
 
 
-* Python
 
 ** [[https://www.youtube.com/watch?v=LosIGgon_KM][Python Tutorial Urllib - GET Requests]]
 
