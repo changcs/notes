@@ -578,6 +578,11 @@ Browse [[https://coldnew.github.io/fa15781c/][Gentoo epatch Introduction by cold
 Browse [[https://wiki.gentoo.org/wiki/Home_router][Gentoo Home router]]
 
 
+* Linux kernel
+
+** [[https://lore.kernel.org/lists.html][List archives on lore.kernel.org]]
+
+
 * Emacs and Org mode Tips
 
 ** Dired attach multiple files
