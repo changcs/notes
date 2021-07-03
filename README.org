@@ -552,6 +552,7 @@ from Debian ~latex-cjkchinesearphic-bsmi00lp~ packages:
 /usr/share/texmf/fonts/tfm/arphic
 /usr/share/texmf/fonts/vf/arphic
 /usr/share/texmf/fonts/type1/arphic
+/usr/share/texmf/fonts/map/dvips/arphic
 #+END_EXAMPLE
 
 Finally you have to run ~mktexlsr~ command to refresh the kpathsea caches.
