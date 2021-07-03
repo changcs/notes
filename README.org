@@ -558,6 +558,21 @@ from Debian ~latex-cjkchinesearphic-bsmi00lp~ packages:
 Finally you have to run ~mktexlsr~ command to refresh the kpathsea caches.
 
 
+*** Optional fix for certain TexLive version
+
+According to [[https://github.com/void-linux/void-packages/issues/28051][todays update breaks fonts in texlive Issue No 28051]]
+
+#+BEGIN_EXAMPLE
+sed -i 's:`kpsewhich -var-value=TEXMFROOT`:"/usr/share/texmf-dist":' /usr/bin/updmap
+
+updmap-sys --syncwithtrees
+
+updmap-sys
+#+END_EXAMPLE
+
+Please note you may need to copy ~/usr/share/tlpkg~ to ~/usr/share/texmf-dist~ for ~updmap-sys~ to run.
+
+
 ** Circular dependencies between ~certifi~ and ~setuptools~
 
 Browse [[https://www.reddit.com/r/Gentoo/comments/i0fl7w/help_how_to_overcome_the_circular_dependencies/][How to overcome the circular dependencies between certifi and setuptools]]
