@@ -555,6 +555,8 @@ from Debian ~latex-cjkchinesearphic-bsmi00lp~ packages:
 /usr/share/texmf/fonts/map/dvips/arphic
 #+END_EXAMPLE
 
+Unmark ~Map bsmiu.map~ in ~/etc/texmf/updmap.d/00updmap.cfg~, and run
+~texmf-update~.
 Finally you have to run ~mktexlsr~ command to refresh the kpathsea caches.
 
 
