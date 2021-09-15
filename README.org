@@ -287,7 +287,9 @@ emerge --sync # or
 
 emerge-webrsync
 
-emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world
+emerge --ask --verbose --update --deep --with-bdeps=y --newuse @world # or
+
+emerge -uDNav --with-bdeps=y @world
 #+END_QUOTE
 
 
