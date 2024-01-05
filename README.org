@@ -180,7 +180,7 @@ Target Profile as ~TI AM335x BeagleBone Black~.
 More details can be found [[https://openwrt.org/docs/guide-developer/build-system/use-buildsystem][here]]. Actions:
 
 1. run ~./scripts/feeds update -a~
-2. run ~./scripts/feeds install -a -f~
+2. run ~./scripts/feeds install -a~
 3. run ~make menuconfig~ and set target
 4. run ~make defconfig~ to set default config for build system and device
 5. run ~make kernel_menuconfig~ (optional and check ~CONFIG_COLLECT_KERNEL_DEBUG=y~)
