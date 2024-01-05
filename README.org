@@ -195,7 +195,7 @@ More details can be found [[https://openwrt.org/docs/guide-developer/build-syste
 Note ~make printdb~ can show available make targets.
 
 #+BEGIN_QUOTE
-ionice -c 3 nice -n19 make V=cs
+ionice -c 3 nice -n19 make V=sc
 #+END_QUOTE
 
 
