@@ -593,6 +593,13 @@ Browse [[https://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds][Basic
 Browse [[https://coldnew.github.io/fa15781c/][Gentoo epatch Introduction by coldnew]]
 
 
+** Fix ~startx dev tty permission denied~ problem
+
+#+BEGIN_EXAMPLE
+rc-update add elogind boot
+#+END_EXAMPLE
+
+
 ** Home router
 
 Browse [[https://wiki.gentoo.org/wiki/Home_router][Gentoo Home router]]
