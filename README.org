@@ -464,7 +464,7 @@ Browse [[https://wiki.gentoo.org/wiki/VirtualBox][Gentoo VirtualBox]]
 #+BEGIN_EXAMPLE
 echo "app-emulation/virtualbox-bin PUEL" >> /etc/portage/package.license/virtualbox-bin
 
-emerge -av app-emulation/virtualbox-bin
+emerge -av app-emulation/virtualbox
 
 gpasswd -a <user> vboxusers
 #+END_EXAMPLE
